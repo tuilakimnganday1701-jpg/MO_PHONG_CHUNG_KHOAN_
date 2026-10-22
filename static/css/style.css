@@ -6,7 +6,7 @@
 }
 
 html {
-    scroll-behavior: smooth; /* Cuộn mượt khi click menu */
+    scroll-behavior: smooth; /* Cuộn mượt khi click menu & nút quay về */
 }
 
 body {
@@ -69,22 +69,22 @@ body {
 
 .nav-container {
     display: flex;
-    justify-content: space-between; /* Căn đều các ô ra toàn màn hình */
+    justify-content: space-between;
     align-items: center;
     gap: 12px;
     width: 100%;
 }
 
 .nav-link {
-    flex: 1; /* Chia đều chiều rộng */
+    flex: 1;
     text-align: center;
-    color: #000000 !important; /* Chữ đen rõ nét */
-    text-decoration: none !important; /* Khai tử gạch chân */
+    color: #000000 !important;
+    text-decoration: none !important;
     font-weight: 700;
     padding: 12px 10px;
-    background-color: #eadef7 !important; /* Màu ô tím nhạt */
+    background-color: #eadef7 !important;
     border: 1px solid #d4c2f0;
-    border-radius: 10px !important; /* Bo góc từng ô */
+    border-radius: 10px !important;
     font-size: 0.95rem;
     transition: all 0.25s ease-in-out;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
@@ -92,8 +92,8 @@ body {
 }
 
 .nav-link:hover {
-    background-color: #5c207c !important; /* Đổi màu khi di chuột */
-    color: #ffffff !important; /* Chữ trắng khi di chuột */
+    background-color: #5c207c !important;
+    color: #ffffff !important;
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(92, 32, 124, 0.3);
 }
@@ -141,12 +141,12 @@ body {
 }
 
 /* ==========================================
-   6. KHU VỰC VIDEO & CHÚ THÍCH (CÓ THẺ GIÁ MAX/MIN GỌN GÀNG)
+   6. KHU VỰC VIDEO & CHÚ THÍCH
    ========================================== */
 .top-section {
     display: flex;
     gap: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .video-box {
@@ -211,7 +211,6 @@ body {
     color: #3b1151;
 }
 
-/* Định dạng cho Giá Max & Min trong chú thích */
 .legend-stats-container {
     display: flex;
     gap: 12px;
@@ -264,7 +263,73 @@ body {
 }
 
 /* ==========================================
-   7. PHẦN CHU KỲ (2 Ô TÍM NHẠT ĐỈNH & SUY THOÁI)
+   7. 4 Ô THÔNG SỐ KỸ THUẬT (SAU KHUNG VIDEO)
+   ========================================== */
+.tech-specs-section {
+    background: white;
+    padding: 22px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.tech-specs-section h3 {
+    color: #3b1151;
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-size: 1.25rem;
+}
+
+.tech-grid-4 {
+    display: flex;
+    gap: 15px;
+}
+
+.tech-card {
+    flex: 1;
+    background: #f3ebfc;
+    border: 1px solid #d4c2f0;
+    border-radius: 10px;
+    padding: 15px 12px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(107, 33, 168, 0.03);
+    transition: transform 0.2s ease;
+}
+
+.tech-card:hover {
+    transform: translateY(-3px);
+}
+
+.tech-icon {
+    font-size: 1.6rem;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.tech-card h4 {
+    margin: 0 0 5px 0;
+    color: #3b1151;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.tech-card p {
+    margin: 0;
+    color: #2b2b2b;
+    font-size: 0.92rem;
+    font-weight: 600;
+}
+
+.tech-card code {
+    background: rgba(92, 32, 124, 0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #5c207c;
+}
+
+/* ==========================================
+   8. PHẦN CHU KỲ & 2 Ô ĐỈNH / SUY THOÁI
    ========================================== */
 .cycle-section, .anomaly-section {
     background: white;
@@ -282,7 +347,6 @@ body {
     font-size: 1.4em;
 }
 
-/* 2 ô nhỏ bo góc màu tím nhạt cho Đỉnh & Suy thoái */
 .stats-summary-grid {
     display: flex;
     gap: 20px;
@@ -385,7 +449,6 @@ body {
     border-radius: 4px;
 }
 
-/* Xử lý ảnh Outliers không bị tràn màn hình */
 .center-img-box {
     background: #ffffff;
     border: 1px solid #e2d9eb;
@@ -435,7 +498,6 @@ body {
     color: #3b2b45;
 }
 
-/* Khung kết luận chu kỳ: Nền tím nhạt, căn lề trái */
 .cycle-evaluation-box {
     background: #f3ebfc !important;
     border: 1px solid #d4c2f0 !important;
@@ -470,7 +532,7 @@ body {
 }
 
 /* ==========================================
-   8. PHẦN KẾT LUẬN CHUNG
+   9. PHẦN KẾT LUẬN CHUNG
    ========================================== */
 .conclusion-section {
     background: #fff;
@@ -496,7 +558,7 @@ body {
 }
 
 /* ==========================================
-   9. PHẦN LỜI CẢM ƠN Ở CUỐI BÀI
+   10. PHẦN LỜI CẢM ƠN & NÚT QUAY VỀ ĐẦU TRANG
    ========================================== */
 .thank-you-section {
     background: linear-gradient(135deg, #4a1c63 0%, #5c207c 100%);
@@ -536,17 +598,5 @@ body {
     margin-top: 10px;
 }
 
-/* ==========================================
-   10. RESPONSIVE ĐIỆN THOẠI & MÀN HÌNH NHỎ
-   ========================================== */
-@media (max-width: 768px) {
-    .grid-two-columns, .top-section, .nav-container, .legend-stats-container, .stats-summary-grid {
-        flex-direction: column;
-    }
-    .nav-link {
-        width: 100%;
-    }
-    .center-img-box img {
-        max-width: 100% !important;
-    }
-}
+/* Thiết kế nút bấm "Quay lại trang đầu" */
+.back-to
